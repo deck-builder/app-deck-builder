@@ -12,7 +12,7 @@ const Layout = ({ children }: Props) => {
   return (
     <main className="layout">
       <header>Deck Builder</header>
-      <SearchBar />
+      <SearchBar className="layout--search-bar" />
       <section>
         {children}
       </section>

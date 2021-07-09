@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@import "../variables/colors.scss";
 
 @mixin elevation-0 {
   border: 1px solid $black-12;

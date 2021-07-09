@@ -6,6 +6,12 @@
     background-color: $primary;
     color: $white;
     @include header-1;
-    padding: 1.125rem 1rem 1.125rem 4.5rem;
+    padding: 0.625rem 1rem 1.625rem 4.5rem;
+  }
+
+  .layout--search-bar {
+    position: relative;
+    top: -1.5rem;
+    margin: 0 4.25rem;
   }
 }

@@ -1,2 +1,23 @@
+@import "../../assets/style/mixins/elevations.scss";
 @import "../../assets/style/mixins/typography.scss";
 @import "../../assets/style/variables/colors.scss";
+
+.search-bar {
+  @include elevation-1;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  background-color: $white;
+
+  > .search-bar-input {
+    @include subtitle-1;
+    border: 0 none;
+    padding: 0;
+    margin-left: 1rem;
+    flex-grow: 1;
+
+    &::placeholder {
+      color: $black-60;
+    }
+  }
+}
