@@ -1,7 +1,7 @@
-import React from 'react'
+import CardSearch from './containers/card-search'
 
 const App = () => (
-  <h1>Hello World</h1>
+  <CardSearch />
 )
 
 export default App

@@ -22,10 +22,10 @@ const config = {
           configFile: 'tsconfig.json'
         }
       },
-      // {
-      //   test: /\.(s*)css$/,
-      //   use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
-      // },
+      {
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+      },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
