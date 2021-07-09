@@ -1,7 +1,10 @@
 import CardSearch from './containers/card-search'
+import Layout from './components/layout/layout'
 
 const App = () => (
-  <CardSearch />
+  <Layout>
+    <CardSearch />
+  </Layout>
 )
 
 export default App

@@ -1,0 +1,11 @@
+@import "../../assets/style/mixins/typography.scss";
+@import "../../assets/style/variables/colors.scss";
+
+.layout {
+  header {
+    background-color: $primary;
+    color: $white;
+    @include header-1;
+    padding: 1.125rem 1rem 1.125rem 4.5rem;
+  }
+}
