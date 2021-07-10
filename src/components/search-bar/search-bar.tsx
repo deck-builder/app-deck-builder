@@ -5,6 +5,8 @@ import SearchIcon from '../icons/search'
 
 import './search-bar.scss'
 
+import { getCards } from '../../services/deck-builder'
+
 export interface Props {
   className?: string
 }
@@ -12,7 +14,12 @@ export interface Props {
 const SearchBar = ({ className }: Props) => {
 
   const handleChangeSearchInput: ChangeEventHandler<HTMLInputElement> = (event) => {
-    console.log(event.target.value)
+    fetchCards(event.target.value)
+  }
+
+  const fetchCards = async (name: string) => {
+    const cards = await getCards(name)
+    console.log(cards)
   }
 
   return (
