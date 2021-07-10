@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import createSagaMiddleware from 'redux-saga'
 
 import cardSearch from './slices/cardSearch'
-import saga from './sagas/cardSearch'
+import rootSaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -13,7 +13,7 @@ const store = configureStore({
   middleware: [sagaMiddleware]
 })
 
-sagaMiddleware.run(saga)
+sagaMiddleware.run(rootSaga)
 
 export type RootState = ReturnType<typeof store.getState>
 

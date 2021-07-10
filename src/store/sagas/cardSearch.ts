@@ -1,4 +1,5 @@
-import { call, put, takeLatest } from 'typed-redux-saga'
+import { call } from 'typed-redux-saga'
+import { put, takeLatest } from '@redux-saga/core/effects'
 import { getCards } from '../../services/deck-builder'
 import { search as searchAction, loadRequest, loadSuccess, loadFailure } from '../slices/cardSearch'
 
@@ -12,8 +13,6 @@ export function* search({ payload }: ReturnType<typeof searchAction>) {
   }
 }
 
-
-
-export default function* cardSearchSagas() {
+export default function* watcher() {
   yield takeLatest(searchAction, search);
 }
