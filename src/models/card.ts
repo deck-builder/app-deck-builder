@@ -19,8 +19,8 @@ export interface Rulling {
 export interface Card {
   artist: string,
   cmc: number,
-  colorIdentity: ColorIdentity[],
-  colors: Color[]
+  colorIdentity?: ColorIdentity[],
+  colors?: Color[]
   foreignNames: ForeignName[]
   id: string
   imageUrl: string
