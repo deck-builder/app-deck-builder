@@ -1,5 +1,5 @@
 import Table from '../components/table'
-import { useAppSelector } from '../store/hooks'
+import useAppSelector from '../hooks/useAppSelector'
 import { selectCards } from '../store/slices/cardSearch'
 
 const CardSearch = () => {

@@ -2,7 +2,8 @@ import { ChangeEventHandler } from 'react'
 import classnames from 'classnames'
 
 import SearchIcon from '../icons/search'
-import { useAppDispatch, useAppSelector } from '../../store/hooks'
+import useAppDispatch from '../../hooks/useAppDispatch'
+import useAppSelector from '../../hooks/useAppSelector'
 import { search, selectSearchOptions } from '../../store/slices/cardSearch'
 
 import './search-bar.scss'
