@@ -1,6 +1,10 @@
 import Table from '../components/table'
+import { useAppSelector } from '../store/hooks'
+import { selectCards } from '../store/slices/cardSearch'
 
 const CardSearch = () => {
+  const cards = useAppSelector(selectCards)
+
   return (
     <Table>
       <thead>
@@ -8,13 +12,18 @@ const CardSearch = () => {
           <td>Card Name</td>
           <td>Mana</td>
           <td>Type</td>
-          <td>Sets</td>
+          <td>Set</td>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>oi</td>
-        </tr>
+        {(cards || []).map(card => (
+          <tr key={card.id}>
+            <td>{card.name}</td>
+            <td>{card.manaCost}</td>
+            <td>{card.type}</td>
+            <td>{card.set}</td>
+          </tr>
+        ))}
       </tbody>
     </Table>
   )

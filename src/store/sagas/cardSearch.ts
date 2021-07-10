@@ -1,0 +1,19 @@
+import { call, put, takeLatest } from 'typed-redux-saga'
+import { getCards } from '../../services/deck-builder'
+import { search as searchAction, loadRequest, loadSuccess, loadFailure } from '../slices/cardSearch'
+
+export function* search({ payload }: ReturnType<typeof searchAction>) {
+  try {
+    yield put(loadRequest())
+    const cards = yield* call(getCards, payload.name)
+    yield put(loadSuccess(cards))
+  } catch (error) {
+    yield put(loadFailure())
+  }
+}
+
+
+
+export default function* cardSearchSagas() {
+  yield takeLatest(searchAction, search);
+}

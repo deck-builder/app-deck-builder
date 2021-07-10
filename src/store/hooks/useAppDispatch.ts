@@ -1,4 +1,6 @@
 import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '../index'
 
-export const useAppDispatch = () => useDispatch<AppDispatch>()
+const useAppDispatch = () => useDispatch<AppDispatch>()
+
+export default useAppDispatch
