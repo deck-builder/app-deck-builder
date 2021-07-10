@@ -11,6 +11,11 @@ export interface ForeignName {
   type: string
 }
 
+export interface Rulling {
+  date: string
+  text: string
+}
+
 export interface Card {
   artist: string,
   cmc: number,
@@ -30,6 +35,7 @@ export interface Card {
   power: string
   printings: string[]
   rarity: string
+  rullings?: Rulling[]
   set: string
   setName: string
   subtypes: string[]
