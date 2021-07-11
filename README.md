@@ -11,7 +11,7 @@ A SPA to manage your MTG decks.
 
 ## Run
 
-For now, you need to run the [api-deck-builder](https://github.com/deck-builder/api-deck-builder) to work in this project.
+For now, you need to run [api-deck-builder](https://github.com/deck-builder/api-deck-builder) locally to work in this project.
 
 ### Install dependencies
 ```bash
