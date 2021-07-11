@@ -6,7 +6,7 @@ A SPA to manage your MTG decks.
 - [React](https://github.com/facebook/react)
 - [Typescript](https://github.com/microsoft/TypeScript)
 - [Redux](https://github.com/reduxjs/redux)
--[Redux Saga](https://github.com/redux-saga/redux-saga)
+- [Redux Saga](https://github.com/redux-saga/redux-saga)
 - [Sass](https://github.com/sass/sass)
 
 ## Run
