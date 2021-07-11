@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit' 
 import createSagaMiddleware from 'redux-saga'
 
-import cardSearch from './slices/cardSearch'
-import rootSaga from './sagas'
+import cardSearch from './card-search'
+import rootSaga from './root-sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 

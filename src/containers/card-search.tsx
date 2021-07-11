@@ -1,6 +1,6 @@
 import Table from '../components/table'
 import useAppSelector from '../hooks/useAppSelector'
-import { selectCards } from '../store/slices/cardSearch'
+import { selectCards } from '../store/card-search'
 
 const CardSearch = () => {
   const cards = useAppSelector(selectCards)

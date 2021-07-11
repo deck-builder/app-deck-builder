@@ -1,11 +1,10 @@
-import { ButtonHTMLAttributes, ChangeEventHandler, useState } from 'react'
+import { ChangeEventHandler, useState } from 'react'
 import classnames from 'classnames'
 
 import SearchIcon from '../icons/search'
-import FilterIcon from '../icons/filter'
 import useAppDispatch from '../../hooks/useAppDispatch'
 import useAppSelector from '../../hooks/useAppSelector'
-import { search, selectSearchOptions } from '../../store/slices/cardSearch'
+import { search, selectSearchOptions } from '../../store/card-search'
 import FilterButton from '../filter-button'
 import Collapsible from '../collapsible'
 
