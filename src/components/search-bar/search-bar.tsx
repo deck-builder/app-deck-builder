@@ -1,10 +1,13 @@
-import { ChangeEventHandler } from 'react'
+import { ButtonHTMLAttributes, ChangeEventHandler, useState } from 'react'
 import classnames from 'classnames'
 
 import SearchIcon from '../icons/search'
+import FilterIcon from '../icons/filter'
 import useAppDispatch from '../../hooks/useAppDispatch'
 import useAppSelector from '../../hooks/useAppSelector'
 import { search, selectSearchOptions } from '../../store/slices/cardSearch'
+import FilterButton from '../filter-button'
+import Collapsible from '../collapsible'
 
 import './search-bar.scss'
 
@@ -15,6 +18,7 @@ export interface Props {
 const SearchBar = ({ className }: Props) => {
   const dispatch = useAppDispatch()
   const { name } = useAppSelector(selectSearchOptions)
+  const [showFilters, setShowFilters] = useState<boolean>(false)
 
   const handleChangeSearchInput: ChangeEventHandler<HTMLInputElement> = ({ target: { value }}) => {
     dispatch(search({ name: value }))
@@ -22,8 +26,14 @@ const SearchBar = ({ className }: Props) => {
 
   return (
     <div className={classnames('search-bar', className)}>
-      <SearchIcon />
-      <input className="search-bar-input" type="text" placeholder="Search" value={name} onChange={handleChangeSearchInput} />
+      <div className="input-row">
+        <SearchIcon />
+        <input className="search-bar-input" type="text" placeholder="Search" value={name} onChange={handleChangeSearchInput} />
+        <FilterButton value={showFilters} onChange={setShowFilters} />
+      </div>
+      <Collapsible collapse={!showFilters}>
+        Filters
+      </Collapsible>
     </div>
   )
 }

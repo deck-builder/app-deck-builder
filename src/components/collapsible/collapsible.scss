@@ -1,0 +1,14 @@
+.collapsible {
+  &:not(.flat) {
+    transition: height 0.3s;
+    overflow: hidden;
+  }
+
+  &.collapsed {
+    pointer-events: none;
+
+    &.flat {
+      overflow: hidden;
+    }
+  }
+}
