@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import SearchIcon from '../icons/search'
 import useAppDispatch from '../../hooks/useAppDispatch'
 import useAppSelector from '../../hooks/useAppSelector'
-import { search, selectSearchOptions } from '../../store/slices/cardSearch'
+import { search, selectSearchOptions } from '../../store/card-search'
 
 import './search-bar.scss'
 
